@@ -1,0 +1,30 @@
+{
+  "name": "SYPayment",
+  "version": "0.1.0",
+  "summary": "SYPayment.",
+  "description": "Integrate third-party payment SDKs like Alipay and WeChat payment.",
+  "homepage": "https://github.com/<GITHUB_USERNAME>/SYPayment",
+  "license": "MIT",
+  "authors": {
+    "Yu Xulu": "tonyfish@qq.com"
+  },
+  "source": {
+    "git": "https://github.com/<GITHUB_USERNAME>/SYPayment.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "7.0"
+  },
+  "requires_arc": true,
+  "source_files": "Pod/Classes/**/*",
+  "resource_bundles": {
+    "Alipay": [
+      "Pod/Frameworks/AlipaySDK.bundle/*"
+    ]
+  },
+  "vendored_frameworks": [
+    "Pod/Frameworks/Alipay/AlipaySDK.framework",
+    "Pod/Frameworks/WeChat/libWeChatSDK.a",
+    "Pod/Frameworks/WeChat/*.h"
+  ]
+}

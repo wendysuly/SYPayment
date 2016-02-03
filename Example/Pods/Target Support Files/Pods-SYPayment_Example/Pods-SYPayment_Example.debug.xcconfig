@@ -1,0 +1,8 @@
+FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/../../Pod/Frameworks/Alipay" "${PODS_ROOT}/../../Pod/Frameworks/WeChat" "${PODS_ROOT}/../../Pod/Frameworks/WeChat" "${PODS_ROOT}/../../Pod/Frameworks/WeChat" "${PODS_ROOT}/../../Pod/Frameworks/WeChat"
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
+HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/SYPayment"
+LD_RUNPATH_SEARCH_PATHS = $(inherited) '@executable_path/Frameworks' '@loader_path/Frameworks'
+OTHER_CFLAGS = $(inherited)  -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/SYPayment"
+OTHER_LDFLAGS = $(inherited) -ObjC -framework "AlipaySDK" -framework "WXApi.h" -framework "WXApiObject.h" -framework "WechatAuthSDK.h" -framework "libWeChatSDK.a"
+PODS_FRAMEWORK_BUILD_PATH = $(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Pods-SYPayment_Example
+PODS_ROOT = ${SRCROOT}/Pods

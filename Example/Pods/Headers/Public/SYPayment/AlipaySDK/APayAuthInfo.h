@@ -1,0 +1,1 @@
+../../../../../../Pod/Frameworks/Alipay/AlipaySDK.framework/Headers/APayAuthInfo.h
