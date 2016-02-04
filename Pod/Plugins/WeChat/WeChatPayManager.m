@@ -45,18 +45,6 @@ static NSString *const kSuccessString = @"SUCCESS";
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         _theInstance = [[WeChatPayManager alloc] init];
-        
-        id appDelegate = [UIApplication sharedApplication].delegate;
-        [appDelegate aspect_hookSelector:@selector(application:openURL:sourceApplication:annotation:)
-                             withOptions:AspectPositionAfter
-                              usingBlock:^(id<AspectInfo> aspectInfo,
-                                           UIApplication *application,
-                                           NSURL *url,
-                                           NSString *sourceApplication,
-                                           id annotation)
-         {
-             [_theInstance handleOpenURL:url];
-         } error:nil];
     });
     return _theInstance;
 }

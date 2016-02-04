@@ -17,11 +17,6 @@
   },
   "requires_arc": true,
   "source_files": "Pod/Plugins/Common/**/*",
-  "dependencies": {
-    "Aspects": [
-
-    ]
-  },
   "subspecs": [
     {
       "name": "Alipay",
