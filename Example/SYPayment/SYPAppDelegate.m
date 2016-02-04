@@ -7,12 +7,23 @@
 //
 
 #import "SYPAppDelegate.h"
+#import <SYPayment/AlipayManager.h>
+#import <SYPayment/WeChatPayManager.h>
 
 @implementation SYPAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    AlipayConfiguration *alipayConfig = [[AlipayConfiguration alloc] init];
+    // TODO: set configuration of alipay
+
+    [[AlipayManager shareInstance] setConfiguation:alipayConfig];
+    
+    WeChatPayConfiguration *wechatPayConfig = [[WeChatPayConfiguration alloc] init];
+    // TODO: set configuration of wechat pay
+    [[WeChatPayManager sharedInstance] setConfiguration:wechatPayConfig];
+    
     return YES;
 }
 
@@ -43,4 +54,9 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+    [[AlipayManager shareInstance] handleOpenURL:url];
+    [[WeChatPayManager sharedInstance] handleOpenURL:url];
+    return YES;
+}
 @end

@@ -28,14 +28,25 @@ Pod::Spec.new do |s|
   s.platform     = :ios, '7.0'
   s.requires_arc = true
 
-  s.source_files = 'Pod/Classes/**/*'
-  s.resource_bundles = {
-    'Alipay' => ['Pod/Frameworks/AlipaySDK.bundle/*']
-  }
-  s.vendored_frameworks = 'Pod/Frameworks/Alipay/AlipaySDK.framework','Pod/Frameworks/WeChat/libWeChatSDK.a','Pod/Frameworks/WeChat/*.h'
-  # s.vendored_libraries = 'Pod/Frameworks/WeChat/libWeChatSDK.a'
+  s.source_files = 'Pod/Plugins/Common/**/*'
+  s.dependency 'Aspects'
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.subspec "Alipay" do |sp|
+    sp.source_files = 'Pod/Plugins/Alipay/**/*'
+    sp.vendored_frameworks = 'Pod/Frameworks/Alipay/AlipaySDK.framework'
+    sp.resource_bundles = {
+      'Alipay' => ['Pod/Frameworks/Alipay/AlipaySDK.bundle']
+    }
+    sp.frameworks = 'CoreMotion','CoreTelephony','SystemConfiguration'
+    sp.libraries = 'z','c++'
+    sp.dependency 'OpenSSL'
+  end
+
+  s.subspec "WeChat" do |sp|
+    sp.vendored_libraries = 'Pod/Frameworks/WeChat/libWeChatSDK.a'
+    sp.source_files = 'Pod/Frameworks/WeChat/*.h','Pod/Plugins/WeChat/**/*'
+    sp.frameworks = 'SystemConfiguration','CoreTelephony'
+    sp.libraries = 'z','c++','sqlite3'
+  end
+
 end

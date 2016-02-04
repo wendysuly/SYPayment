@@ -1,0 +1,1 @@
+../../../../../Pod/Plugins/WeChat/WeChatPayConfiguration.h

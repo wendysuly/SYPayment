@@ -16,15 +16,53 @@
     "ios": "7.0"
   },
   "requires_arc": true,
-  "source_files": "Pod/Classes/**/*",
-  "resource_bundles": {
-    "Alipay": [
-      "Pod/Frameworks/AlipaySDK.bundle/*"
+  "source_files": "Pod/Plugins/Common/**/*",
+  "dependencies": {
+    "Aspects": [
+
     ]
   },
-  "vendored_frameworks": [
-    "Pod/Frameworks/Alipay/AlipaySDK.framework",
-    "Pod/Frameworks/WeChat/libWeChatSDK.a",
-    "Pod/Frameworks/WeChat/*.h"
+  "subspecs": [
+    {
+      "name": "Alipay",
+      "source_files": "Pod/Plugins/Alipay/**/*",
+      "vendored_frameworks": "Pod/Frameworks/Alipay/AlipaySDK.framework",
+      "resource_bundles": {
+        "Alipay": [
+          "Pod/Frameworks/Alipay/AlipaySDK.bundle"
+        ]
+      },
+      "frameworks": [
+        "CoreMotion",
+        "CoreTelephony",
+        "SystemConfiguration"
+      ],
+      "libraries": [
+        "z",
+        "c++"
+      ],
+      "dependencies": {
+        "OpenSSL": [
+
+        ]
+      }
+    },
+    {
+      "name": "WeChat",
+      "vendored_libraries": "Pod/Frameworks/WeChat/libWeChatSDK.a",
+      "source_files": [
+        "Pod/Frameworks/WeChat/*.h",
+        "Pod/Plugins/WeChat/**/*"
+      ],
+      "frameworks": [
+        "SystemConfiguration",
+        "CoreTelephony"
+      ],
+      "libraries": [
+        "z",
+        "c++",
+        "sqlite3"
+      ]
+    }
   ]
 }

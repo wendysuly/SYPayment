@@ -1,0 +1,1 @@
+../../../../../Pod/Frameworks/WeChat/WechatAuthSDK.h

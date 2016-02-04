@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5D6DE29AD18B2AFE74271E9D /* Pods_SYPayment_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 977E0D43CEC9EA7A85E4673A /* Pods_SYPayment_Tests.framework */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -22,7 +21,8 @@
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
-		A8CAB3FB3F98C0021F64601C /* Pods_SYPayment_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7431BDFBB8AD683D21AB04EB /* Pods_SYPayment_Example.framework */; };
+		A728FB24B31D42330B0D196E /* libPods-SYPayment_Example.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A87E1CE569DAF5CC0927C7B /* libPods-SYPayment_Example.a */; };
+		EEDE43486EF64F56E5D6D488 /* libPods-SYPayment_Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EECA841BE1C74CF56107FAE7 /* libPods-SYPayment_Tests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,14 +57,14 @@
 		6003F5B9195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
-		7431BDFBB8AD683D21AB04EB /* Pods_SYPayment_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SYPayment_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		772D56AE83341F3A3998FAC2 /* SYPayment.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = SYPayment.podspec; path = ../SYPayment.podspec; sourceTree = "<group>"; };
 		78EDE205C5481E162C9D1A62 /* Pods-SYPayment_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SYPayment_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-SYPayment_Example/Pods-SYPayment_Example.release.xcconfig"; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		977E0D43CEC9EA7A85E4673A /* Pods_SYPayment_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SYPayment_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A87E1CE569DAF5CC0927C7B /* libPods-SYPayment_Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SYPayment_Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A662CF7770D29047F84DF6C2 /* Pods-SYPayment_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SYPayment_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SYPayment_Example/Pods-SYPayment_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		E2356547CF14CAA4157952BC /* Pods-SYPayment_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SYPayment_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SYPayment_Tests/Pods-SYPayment_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		E6223C2D40732442FEC84776 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		EECA841BE1C74CF56107FAE7 /* libPods-SYPayment_Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SYPayment_Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,7 +75,7 @@
 				6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */,
 				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
-				A8CAB3FB3F98C0021F64601C /* Pods_SYPayment_Example.framework in Frameworks */,
+				A728FB24B31D42330B0D196E /* libPods-SYPayment_Example.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,7 +86,7 @@
 				6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */,
 				6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */,
-				5D6DE29AD18B2AFE74271E9D /* Pods_SYPayment_Tests.framework in Frameworks */,
+				EEDE43486EF64F56E5D6D488 /* libPods-SYPayment_Tests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,8 +132,8 @@
 				6003F58F195388D20070C39A /* CoreGraphics.framework */,
 				6003F591195388D20070C39A /* UIKit.framework */,
 				6003F5AF195388D20070C39A /* XCTest.framework */,
-				7431BDFBB8AD683D21AB04EB /* Pods_SYPayment_Example.framework */,
-				977E0D43CEC9EA7A85E4673A /* Pods_SYPayment_Tests.framework */,
+				8A87E1CE569DAF5CC0927C7B /* libPods-SYPayment_Example.a */,
+				EECA841BE1C74CF56107FAE7 /* libPods-SYPayment_Tests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -452,6 +452,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_BITCODE = NO;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -492,6 +493,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
+				ENABLE_BITCODE = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;

@@ -1,10 +1,7 @@
-EMBEDDED_CONTENT_CONTAINS_SWIFT = YES
-FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/../../Pod/Frameworks/Alipay" "${PODS_ROOT}/../../Pod/Frameworks/WeChat" "${PODS_ROOT}/../../Pod/Frameworks/WeChat" "${PODS_ROOT}/../../Pod/Frameworks/WeChat" "${PODS_ROOT}/../../Pod/Frameworks/WeChat"
+FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/../../Pod/Frameworks/Alipay" "$(PLATFORM_DIR)/Developer/Library/Frameworks"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/SYPayment"
-LD_RUNPATH_SEARCH_PATHS = $(inherited) '@executable_path/Frameworks' '@loader_path/Frameworks'
-OTHER_CFLAGS = $(inherited) -iquote "$CONFIGURATION_BUILD_DIR/Expecta.framework/Headers" -iquote "$CONFIGURATION_BUILD_DIR/Expecta_Snapshots.framework/Headers" -iquote "$CONFIGURATION_BUILD_DIR/FBSnapshotTestCase.framework/Headers" -iquote "$CONFIGURATION_BUILD_DIR/Specta.framework/Headers" -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/SYPayment"
-OTHER_LDFLAGS = $(inherited) -ObjC -framework "AlipaySDK" -framework "Expecta" -framework "Expecta_Snapshots" -framework "FBSnapshotTestCase" -framework "Specta" -framework "WXApi.h" -framework "WXApiObject.h" -framework "WechatAuthSDK.h" -framework "libWeChatSDK.a"
-OTHER_SWIFT_FLAGS = $(inherited) "-D" "COCOAPODS"
-PODS_FRAMEWORK_BUILD_PATH = $(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Pods-SYPayment_Tests
+HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/Aspects" "${PODS_ROOT}/Headers/Public/Expecta" "${PODS_ROOT}/Headers/Public/Expecta+Snapshots" "${PODS_ROOT}/Headers/Public/FBSnapshotTestCase" "${PODS_ROOT}/Headers/Public/OpenSSL" "${PODS_ROOT}/Headers/Public/SYPayment" "${PODS_ROOT}/Headers/Public/Specta"
+LIBRARY_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/OpenSSL/lib" $(inherited) "${PODS_ROOT}/OpenSSL/lib" $(inherited) "${PODS_ROOT}/../../Pod/Frameworks/WeChat"
+OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/Aspects" -isystem "${PODS_ROOT}/Headers/Public/Expecta" -isystem "${PODS_ROOT}/Headers/Public/Expecta+Snapshots" -isystem "${PODS_ROOT}/Headers/Public/FBSnapshotTestCase" -isystem "${PODS_ROOT}/Headers/Public/OpenSSL" -isystem "${PODS_ROOT}/Headers/Public/SYPayment" -isystem "${PODS_ROOT}/Headers/Public/Specta"
+OTHER_LDFLAGS = $(inherited) -ObjC -l"Aspects" -l"Expecta" -l"Expecta+Snapshots" -l"FBSnapshotTestCase" -l"SYPayment" -l"Specta" -l"WeChatSDK" -l"c++" -l"crypto" -l"sqlite3" -l"ssl" -l"z" -framework "AlipaySDK" -framework "CoreMotion" -framework "CoreTelephony" -framework "Foundation" -framework "QuartzCore" -framework "SystemConfiguration" -framework "UIKit" -framework "XCTest"
 PODS_ROOT = ${SRCROOT}/Pods

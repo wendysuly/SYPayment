@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '331AF9A3F629ABEDC4144109'
+               BlueprintIdentifier = 'E0883981C7241C3F4B34ACE2'
                BlueprintName = 'SYPayment'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'SYPayment.framework'>
+               BuildableName = 'libSYPayment.a'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
